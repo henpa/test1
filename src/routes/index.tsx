@@ -1,5 +1,5 @@
 import { component$ } from "@builder.io/qwik";
-import { server$, type DocumentHead } from "@builder.io/qwik-city";
+import { server$ } from "@builder.io/qwik-city";
 
 const servertest = server$((text: string) => {
   console.log(text);
@@ -21,13 +21,3 @@ export default component$(() => {
     </>
   );
 });
-
-export const head: DocumentHead = {
-  title: "Welcome to Qwik",
-  meta: [
-    {
-      name: "description",
-      content: "Qwik site description",
-    },
-  ],
-};
