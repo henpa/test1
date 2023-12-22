@@ -5,6 +5,11 @@ import tsconfigPaths from "vite-tsconfig-paths";
 
 export default defineConfig(() => {
   return {
+    build: {
+      rollupOptions: {
+        external: ["bun:sqlite"]
+      }
+    },
     plugins: [qwikCity(), qwikVite(), tsconfigPaths()],
     dev: {
       headers: {
